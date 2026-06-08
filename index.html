@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Ananta Villas — Eight private villas in Desa Kutuh, Nusa Dua, Bali</title>
-<meta name="description" content="Eight design-led villas in Desa Kutuh, on the southern edge of Nusa Dua, Bali. Designed by Studio Identity Designers, built by PT TAKSU, operated by MyResorts. Seven placed with private owners. One remains.">
+<meta name="description" content="Eight design-led villas in Desa Kutuh, on the southern edge of Nusa Dua, Bali. Designed by Studio Identity Designers, built by <a href="https://www.thierra.com" target="_blank" rel="noopener">Thierra Construction</a>, operated by MyResorts. Seven placed with private owners. One remains.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -114,6 +114,31 @@
   .whynow__cap{margin-top:18px;font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(241,240,239,.55);max-width:240px;margin-left:auto;margin-right:auto}
   .whynow__src{margin-top:64px;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:rgba(241,240,239,.4)}
   @media(max-width:780px){.whynow{padding:96px 22px}.whynow__stats{grid-template-columns:1fr;border-top:1px solid rgba(241,240,239,.2)}.whynow__stat{border-right:0;border-bottom:1px solid rgba(241,240,239,.2)}.whynow__stat:last-child{border-bottom:0}}
+
+  /* MANDARIN sekce */
+  .mandarin{background:var(--cream-3);padding:140px var(--sp-section-x)}
+  .mandarin__inner{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:88px;align-items:center}
+  .mandarin__copy .eb{margin-bottom:24px}
+  .mandarin__copy h2{
+    font-family:var(--f-display);font-weight:300;
+    font-size:clamp(38px,4.6vw,68px);line-height:1.05;letter-spacing:-.02em;
+    color:var(--ink);margin:0;
+  }
+  .mandarin__copy h2 em{font-style:italic}
+  .mandarin__copy p{margin-top:24px;font-size:16px;line-height:1.65;color:var(--ink-70);max-width:520px}
+  .mandarin__meta{margin-top:36px;display:grid;gap:12px;font-size:13px;letter-spacing:.02em;color:var(--ink-70)}
+  .mandarin__meta-row{display:flex;gap:18px;align-items:baseline}
+  .mandarin__meta-row small{font-size:10.5px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-50);min-width:120px}
+  .mandarin__cta{display:inline-flex;margin-top:36px}
+  .mandarin__media{display:grid;gap:16px}
+  .mandarin__img{width:100%;height:auto;display:block;background:var(--cream-2)}
+  .mandarin__img--main{aspect-ratio:4/3;object-fit:cover}
+  .mandarin__row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .mandarin__row img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
+  @media(max-width:960px){
+    .mandarin{padding:96px 22px}
+    .mandarin__inner{grid-template-columns:1fr;gap:48px}
+  }
 
   /* RENDERS */
   .renders{background:var(--cream-1)}
@@ -225,8 +250,8 @@
   <div class="hero__inner">
     <div class="hero__claim">
       <div class="hero__eyebrow">Desa Kutuh · Nusa Dua · Handover 2027</div>
-      <h1 class="hero__h1">Eight villas.<br><em>Seven owners.</em><br>One remains.</h1>
-      <p class="hero__sub">Design-led villas on the southern edge of Nusa Dua, Bali — currently under construction. Operated as a single short-stay resort by MyResorts.</p>
+      <h1 class="hero__h1">Eight private villas,<br><em>one quiet corner</em><br>of Bali.</h1>
+      <p class="hero__sub">Desa Kutuh — the unhurried south of Nusa Dua. Designed by Studio Identity Designers. Operated by MyResorts. Handover 2027.</p>
       <a href="https://pauly-ceo.github.io/ananta-villas-assets/Ananta_Villas_Investor_Pack.pdf" target="_blank" rel="noopener" class="hero__pack">
         Download villa pack <span class="hero__pack-meta">PDF</span>
         <span class="link__arrow">→</span>
@@ -269,25 +294,19 @@
 
 <!-- PILLAR 03 — HOSPITALITY -->
 <section class="pillar" id="hospitality">
-  <video class="pillar__media lazy-video" muted loop playsinline preload="none"
-         poster="https://pauly-ceo.github.io/ananta-canggu-assets/canggu-poster.jpg"
-         data-src-m="https://pauly-ceo.github.io/ananta-canggu-assets/canggu-m.mp4"
-         data-src-d="https://pauly-ceo.github.io/ananta-canggu-assets/canggu.mp4"></video>
+  <img class="pillar__media" src="https://pauly-ceo.github.io/ananta-villas-assets/render-pool.jpg" alt="Ananta Villa — private pool with palms and ocean light">
   <div class="pillar__inner">
     <div class="pillar__col">
       <div class="pillar__num fade">03 · Hospitality</div>
       <h2 class="pillar__title fade d1">Hospitality.</h2>
-      <p class="pillar__body fade d2">Operated by MyResorts — hotel-style service for every owner. Private pool, daily housekeeping, full hospitality team. The Kempinski hotel, white-sand beaches and the Bali National Golf Club are all next door.</p>
+      <p class="pillar__body fade d2">Operated by MyResorts — hotel-style service for every owner. Private pool, daily housekeeping, full hospitality team. Kempinski, the upcoming Mandarin Oriental and the Bali National Golf Club are all walking distance.</p>
     </div>
   </div>
 </section>
 
 <!-- PILLAR 04 — INVESTMENT -->
 <section class="pillar" id="investment-pillar">
-  <video class="pillar__media lazy-video" muted loop playsinline preload="none"
-         poster="https://pauly-ceo.github.io/ananta-canggu-assets/reach-poster.jpg"
-         data-src-m="https://pauly-ceo.github.io/ananta-canggu-assets/reach-m.mp4"
-         data-src-d="https://pauly-ceo.github.io/ananta-canggu-assets/reach.mp4"></video>
+  <img class="pillar__media" src="https://pauly-ceo.github.io/ananta-villas-assets/render-aerial.jpg" alt="Ananta Villas — aerial view of Desa Kutuh, Nusa Dua">
   <div class="pillar__inner">
     <div class="pillar__col">
       <div class="pillar__num fade">04 · Investment</div>
@@ -309,7 +328,7 @@
       </div>
       <div class="whynow__stat fade d1">
         <p class="whynow__big">5★<small></small></p>
-        <div class="whynow__cap">Kempinski · St. Regis · Sofitel next door</div>
+        <div class="whynow__cap">Kempinski · Mandarin Oriental · Sofitel next door</div>
       </div>
       <div class="whynow__stat fade d2">
         <p class="whynow__big">7<small>/8</small></p>
@@ -320,12 +339,39 @@
   </div>
 </section>
 
+<!-- MANDARIN ORIENTAL — next door -->
+<section class="mandarin" id="mandarin">
+  <div class="mandarin__inner">
+    <div class="mandarin__copy fade">
+      <div class="eb">Next door · 2027</div>
+      <h2>And just over the hill — <em>Mandarin Oriental opens in 2027.</em></h2>
+      <p>49 cliff-top villa residences, three restaurants, a beach club and a Mandarin Oriental Spa, anchoring the southern tip of Bukit. Architecture by Design Lab, landscapes by Bill Bensley. Walking distance from Ananta — same village, same beach.</p>
+      <div class="mandarin__meta">
+        <div class="mandarin__meta-row"><small>Address</small><span>Jl. Gunung Payung 8 · Desa Kutuh</span></div>
+        <div class="mandarin__meta-row"><small>Opening</small><span>2027 · resort + 49 residences</span></div>
+        <div class="mandarin__meta-row"><small>Architecture</small><span>Design Lab · Bensley landscapes</span></div>
+      </div>
+      <a href="https://mo-residencesbali.com/" target="_blank" rel="noopener" class="link mandarin__cta">
+        Explore Mandarin Oriental Bali
+        <span class="link__arrow">→</span>
+      </a>
+    </div>
+    <div class="mandarin__media fade d1">
+      <img class="mandarin__img mandarin__img--main" src="https://press.mandarinoriental.com/wp-content/uploads/2024/07/961c847a15ebaad11bbb89890f4aa003-l.jpg" alt="Mandarin Oriental Bali — cliff-top resort rendering, opening 2027" loading="lazy">
+      <div class="mandarin__row">
+        <img src="https://mo-residencesbali.com/uploads/01KR0RYJN93A6P4CS5508XK6D8.png" alt="Mandarin Oriental Residences Bali — villa rendering" loading="lazy">
+        <img src="https://mo-residencesbali.com/uploads/01KR0RYJNSWWY7VY0VZBQW3WYE.png" alt="Mandarin Oriental Bali — amenities clubhouse rendering" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- RENDERS -->
 <section class="renders" id="renders">
   <div class="renders__intro">
     <div class="eb fade">The vision</div>
     <h2 class="fade d1">Organic forms, perforated screens, gardens that <em>walk you through the house.</em></h2>
-    <p class="renders__credit fade d2">Designed by <a href="https://www.identitydesigners.com/" target="_blank" rel="noopener">Studio Identity Designers</a> · Built by PT TAKSU · Operated by <a href="https://www.myresorts.eu/" target="_blank" rel="noopener">MyResorts</a></p>
+    <p class="renders__credit fade d2">Designed by <a href="https://www.identitydesigners.com/" target="_blank" rel="noopener">Studio Identity Designers</a> · Built by <a href="https://www.thierra.com" target="_blank" rel="noopener">Thierra Construction</a> · Operated by <a href="https://www.myresorts.eu/" target="_blank" rel="noopener">MyResorts</a></p>
   </div>
 
   <div class="render fade">
@@ -362,7 +408,7 @@
     <div class="credits__sep"></div>
     <div class="credits__item fade d1">
       <small>Built by</small>
-      PT TAKSU
+      <a href="https://www.thierra.com" target="_blank" rel="noopener">Thierra Construction</a>
     </div>
     <div class="credits__sep"></div>
     <div class="credits__item fade d2">
