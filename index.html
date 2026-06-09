@@ -277,7 +277,7 @@
       <div class="hero__eyebrow">Desa Kutuh · Nusa Dua · Handover 2027</div>
       <h1 class="hero__h1">Eight private villas,<br><em>one quiet corner</em><br>of Bali.</h1>
       <p class="hero__sub">Desa Kutuh — the unhurried south of Nusa Dua. Designed by Studio Identity Designers. Operated by MyResorts. Handover 2027.</p>
-      <a href="https://pauly-ceo.github.io/ananta-villas-assets/Ananta_Villas_Investor_Pack.pdf" target="_blank" rel="noopener" class="hero__pack">
+      <a href="#" data-deck-trigger class="hero__pack">
         Download villa pack <span class="hero__pack-meta">PDF</span>
         <span class="link__arrow">→</span>
       </a>
@@ -507,7 +507,7 @@
         <li>Standard payment schedule 35 / 35 / 25 / 5</li>
         <li>Full investor pack — pricing, pro-forma, contract — on request</li>
       </ul>
-      <a href="https://pauly-ceo.github.io/ananta-villas-assets/Ananta_Villas_Investor_Pack.pdf" target="_blank" rel="noopener" class="link invest__cta">
+      <a href="#" data-deck-trigger class="link invest__cta">
         Download villa pack
         <span class="link__arrow">→</span>
       </a>
@@ -536,7 +536,7 @@
         <a href="mailto:kristyna.pauly@myresorts.eu">kristyna.pauly@myresorts.eu</a>
         <a href="https://wa.me/420739685681">WhatsApp +420 739 685 681</a>
       </div>
-      <a href="https://pauly-ceo.github.io/ananta-villas-assets/Ananta_Villas_Investor_Pack.pdf" target="_blank" rel="noopener" class="link contact__pack">
+      <a href="#" data-deck-trigger class="link contact__pack">
         Or download the villa pack first <span class="link__arrow">→</span>
       </a>
     </div>
@@ -627,6 +627,247 @@
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
   })();
+})();
+</script>
+
+<script>window.DECK_PROJECT="Ananta Villas";window.DECK_PDF_URL="https://pauly-ceo.github.io/ananta-villas-assets/Ananta_Villas_Investor_Pack.pdf";</script>
+<!-- ============================================
+     INVESTOR DECK MODAL — paste before </body>
+     Set window.DECK_PROJECT and window.DECK_PDF_URL
+     Set POWER_AUTOMATE_URL below (from Power Automate)
+     ============================================ -->
+<style>
+  .deck-modal{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;padding:20px}
+  .deck-modal[hidden]{display:none}
+  .deck-modal__backdrop{position:absolute;inset:0;background:rgba(0,0,0,.78);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .deck-modal__card{position:relative;background:#1d2120;color:#fff;padding:48px 40px 40px;max-width:480px;width:100%;border-radius:6px;box-shadow:0 30px 80px rgba(0,0,0,.5);font-family:"Inter",system-ui,sans-serif}
+  .deck-modal__close{position:absolute;top:14px;right:14px;width:36px;height:36px;font-size:24px;color:rgba(255,255,255,.7);background:transparent;border:0;cursor:pointer;border-radius:50%;line-height:1}
+  .deck-modal__close:hover{background:rgba(255,255,255,.08);color:#fff}
+  .deck-modal__eb{font-size:10.5px;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:16px;display:inline-flex;align-items:center;gap:12px}
+  .deck-modal__eb::before{content:"";width:24px;height:1px;background:rgba(255,255,255,.4)}
+  .deck-modal__h{font-family:"Cormorant Garamond","Bodoni Moda",Georgia,serif;font-weight:300;font-size:34px;line-height:1.08;letter-spacing:-.02em;margin:0 0 14px;color:#fff}
+  .deck-modal__sub{font-size:14px;line-height:1.6;color:rgba(255,255,255,.7);margin:0 0 30px;font-weight:300}
+
+  .deck-form__label{display:block;margin-bottom:22px;position:relative}
+  .deck-form__label > span{display:block;font-size:10px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:8px}
+  .deck-form__label input{width:100%;padding:10px 0;background:transparent;border:0;border-bottom:1px solid rgba(255,255,255,.22);color:#fff;font-size:15px;font-family:inherit;outline:none;transition:border-color .25s}
+  .deck-form__label input::placeholder{color:rgba(255,255,255,.3)}
+  .deck-form__label input:focus{border-bottom-color:#fff}
+
+  .deck-form__autocomplete{position:absolute;top:calc(100% + 2px);left:0;right:0;background:#2a2e2c;border-radius:4px;list-style:none;padding:6px 0;margin:0;max-height:240px;overflow:auto;z-index:10;display:none;box-shadow:0 8px 20px rgba(0,0,0,.4)}
+  .deck-form__autocomplete.is-open{display:block}
+  .deck-form__autocomplete li{padding:9px 16px;cursor:pointer;font-size:14px;color:rgba(255,255,255,.85)}
+  .deck-form__autocomplete li:hover, .deck-form__autocomplete li.is-focus{background:rgba(255,255,255,.08);color:#fff}
+
+  .deck-form__submit{margin-top:8px;width:100%;padding:15px 24px;background:#fff;color:#1d2120;font-size:11.5px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;cursor:pointer;border:0;border-radius:2px;font-family:inherit;transition:opacity .25s}
+  .deck-form__submit:hover{opacity:.85}
+  .deck-form__submit:disabled{opacity:.5;cursor:wait}
+  .deck-form__status{margin-top:14px;font-size:13px;color:#f88;min-height:18px;text-align:center}
+  .deck-form__note{margin-top:18px;font-size:11px;color:rgba(255,255,255,.4);text-align:center;line-height:1.5}
+
+  .deck-form__success{text-align:center;padding:14px 0}
+  .deck-form__success-icon{width:56px;height:56px;border-radius:50%;background:#3a8;color:#fff;display:flex;align-items:center;justify-content:center;font-size:30px;margin:0 auto 18px}
+  .deck-form__success h4{font-family:"Cormorant Garamond","Bodoni Moda",Georgia,serif;font-size:32px;font-weight:300;margin:0 0 14px;color:#fff}
+  .deck-form__success p{font-size:14px;line-height:1.6;color:rgba(255,255,255,.7);margin:0 0 8px}
+
+  @media(max-width:560px){
+    .deck-modal__card{padding:36px 24px 30px}
+    .deck-modal__h{font-size:26px}
+  }
+</style>
+
+<div class="deck-modal" id="deck-modal" hidden aria-hidden="true" role="dialog">
+  <div class="deck-modal__backdrop" data-deck-close></div>
+  <div class="deck-modal__card">
+    <button class="deck-modal__close" data-deck-close aria-label="Close">×</button>
+    <div class="deck-form__main" id="deck-form-main">
+      <div class="deck-modal__eb">Investor pack</div>
+      <h3 class="deck-modal__h">Get the deck.</h3>
+      <p class="deck-modal__sub">Drop your email and we'll send you the full investor pack. PDF · 23 pages. No newsletter.</p>
+      <form class="deck-form" id="deck-form" novalidate>
+        <label class="deck-form__label">
+          <span>Email</span>
+          <input type="email" name="email" id="deck-email" required placeholder="you@company.com" autocomplete="email">
+        </label>
+        <label class="deck-form__label">
+          <span>Country</span>
+          <input type="text" name="country" id="deck-country" autocomplete="off" required placeholder="Start typing — e.g. cz">
+          <ul class="deck-form__autocomplete" id="deck-country-list"></ul>
+        </label>
+        <button type="submit" class="deck-form__submit" id="deck-submit">Send me the deck &nbsp;→</button>
+        <div class="deck-form__status" id="deck-status"></div>
+        <div class="deck-form__note">We only use this to send you the deck. No automated marketing.</div>
+      </form>
+    </div>
+    <div class="deck-form__success" id="deck-success" hidden>
+      <div class="deck-form__success-icon">✓</div>
+      <h4>Check your inbox.</h4>
+      <p>The deck is on its way. If it's not there in a minute, check promotions or spam.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  // ===== POWER AUTOMATE FLOW URL (Jan to fill in) =====
+  // Get from Power Automate flow → "When a HTTP request is received" trigger → "HTTP POST URL"
+  const POWER_AUTOMATE_URL = "YOUR_POWER_AUTOMATE_HTTP_URL";
+
+  // ===== PROJECT CONFIG (set in each site via window.DECK_PROJECT / window.DECK_PDF_URL) =====
+  const PROJECT_NAME = window.DECK_PROJECT || "Ananta";
+  const PDF_URL = window.DECK_PDF_URL || "";
+  const ADMIN_EMAIL = "kristyna.pauly@myresorts.eu";
+
+  const COUNTRIES = [
+    "Afghanistan","Albania","Algeria","Andorra","Angola","Antigua and Barbuda","Argentina","Armenia","Australia","Austria","Azerbaijan",
+    "Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bhutan","Bolivia","Bosnia and Herzegovina","Botswana","Brazil","Brunei","Bulgaria","Burkina Faso","Burundi",
+    "Cabo Verde","Cambodia","Cameroon","Canada","Central African Republic","Chad","Chile","China","Colombia","Comoros","Congo","Costa Rica","Côte d'Ivoire","Croatia","Cuba","Cyprus","Czech Republic",
+    "Denmark","Djibouti","Dominica","Dominican Republic",
+    "Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Eswatini","Ethiopia",
+    "Fiji","Finland","France",
+    "Gabon","Gambia","Georgia","Germany","Ghana","Greece","Grenada","Guatemala","Guinea","Guinea-Bissau","Guyana",
+    "Haiti","Honduras","Hong Kong","Hungary",
+    "Iceland","India","Indonesia","Iran","Iraq","Ireland","Israel","Italy",
+    "Jamaica","Japan","Jordan",
+    "Kazakhstan","Kenya","Kiribati","Kosovo","Kuwait","Kyrgyzstan",
+    "Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg",
+    "Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Morocco","Mozambique","Myanmar",
+    "Namibia","Nauru","Nepal","Netherlands","New Zealand","Nicaragua","Niger","Nigeria","North Korea","North Macedonia","Norway",
+    "Oman",
+    "Pakistan","Palau","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal",
+    "Qatar",
+    "Romania","Russia","Rwanda",
+    "Saint Kitts and Nevis","Saint Lucia","Saint Vincent and the Grenadines","Samoa","San Marino","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","Sudan","Suriname","Sweden","Switzerland","Syria",
+    "Taiwan","Tajikistan","Tanzania","Thailand","Timor-Leste","Togo","Tonga","Trinidad and Tobago","Tunisia","Turkey","Turkmenistan","Tuvalu",
+    "Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","Uruguay","Uzbekistan",
+    "Vanuatu","Vatican City","Venezuela","Vietnam",
+    "Yemen",
+    "Zambia","Zimbabwe"
+  ];
+  const COUNTRY_ALIAS = { cz:"Czech Republic", uk:"United Kingdom", us:"United States", usa:"United States", uae:"United Arab Emirates" };
+
+  // ===== MODAL OPEN/CLOSE =====
+  const modal = document.getElementById('deck-modal');
+  let userLocation = null;
+
+  document.querySelectorAll('[data-deck-trigger]').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      modal.hidden = false;
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => document.getElementById('deck-email').focus(), 100);
+      fetchLocation();
+    });
+  });
+  document.querySelectorAll('[data-deck-close]').forEach(el => {
+    el.addEventListener('click', closeModal);
+  });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !modal.hidden) closeModal(); });
+  function closeModal(){ modal.hidden = true; document.body.style.overflow = ''; }
+
+  // ===== IP GEOLOCATION =====
+  async function fetchLocation(){
+    if (userLocation) return;
+    try {
+      const r = await fetch('https://ipapi.co/json/');
+      const j = await r.json();
+      userLocation = {
+        ip: j.ip || '',
+        city: j.city || '',
+        region: j.region || '',
+        country: j.country_name || '',
+        country_code: j.country_code || '',
+        org: j.org || '',
+        timezone: j.timezone || ''
+      };
+    } catch(e){ userLocation = {}; }
+  }
+
+  // ===== COUNTRY AUTOCOMPLETE =====
+  const countryInput = document.getElementById('deck-country');
+  const countryList = document.getElementById('deck-country-list');
+  let focusIndex = -1;
+  let matches = [];
+
+  function renderList(){
+    if (!matches.length){ countryList.classList.remove('is-open'); countryList.innerHTML=''; return; }
+    countryList.innerHTML = matches.map((c,i) => `<li data-name="${c}" class="${i===focusIndex?'is-focus':''}">${c}</li>`).join('');
+    countryList.classList.add('is-open');
+  }
+  countryInput.addEventListener('input', () => {
+    const q = countryInput.value.toLowerCase().trim();
+    if (!q){ matches=[]; renderList(); return; }
+    const aliasHit = COUNTRY_ALIAS[q];
+    matches = COUNTRIES.filter(c => c.toLowerCase().includes(q)).slice(0, 8);
+    if (aliasHit && !matches.includes(aliasHit)) matches.unshift(aliasHit);
+    focusIndex = -1;
+    renderList();
+  });
+  countryInput.addEventListener('keydown', e => {
+    if (!matches.length) return;
+    if (e.key === 'ArrowDown'){ e.preventDefault(); focusIndex = (focusIndex+1) % matches.length; renderList(); }
+    else if (e.key === 'ArrowUp'){ e.preventDefault(); focusIndex = focusIndex<=0?matches.length-1:focusIndex-1; renderList(); }
+    else if (e.key === 'Enter' && focusIndex >= 0){ e.preventDefault(); selectCountry(matches[focusIndex]); }
+  });
+  countryList.addEventListener('click', e => {
+    if (e.target.tagName === 'LI') selectCountry(e.target.dataset.name);
+  });
+  function selectCountry(name){ countryInput.value = name; matches=[]; renderList(); }
+
+  // ===== FORM SUBMIT =====
+  const form = document.getElementById('deck-form');
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const submit = document.getElementById('deck-submit');
+    const status = document.getElementById('deck-status');
+    const email = document.getElementById('deck-email').value.trim();
+    const country = countryInput.value.trim();
+    if (!email || !country){ status.textContent = 'Please fill in both fields.'; return; }
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){ status.textContent = 'Please use a valid email.'; return; }
+
+    submit.disabled = true;
+    submit.textContent = 'Sending…';
+    status.textContent = '';
+
+    await fetchLocation();
+    const loc = userLocation || {};
+    const locString = [loc.city, loc.region, loc.country].filter(Boolean).join(', ') || 'unknown';
+
+    const payload = {
+      email: email,
+      country: country,
+      project: PROJECT_NAME,
+      pdf_url: PDF_URL,
+      admin_email: ADMIN_EMAIL,
+      location: locString,
+      ip: loc.ip || 'n/a',
+      org: loc.org || 'n/a',
+      timezone: loc.timezone || 'n/a',
+      timestamp: new Date().toISOString(),
+      user_agent: navigator.userAgent
+    };
+
+    try {
+      if (POWER_AUTOMATE_URL === 'YOUR_POWER_AUTOMATE_HTTP_URL'){
+        throw new Error('Power Automate URL not configured.');
+      }
+      const r = await fetch(POWER_AUTOMATE_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      if (!r.ok) throw new Error('flow returned ' + r.status);
+      document.getElementById('deck-form-main').hidden = true;
+      document.getElementById('deck-success').hidden = false;
+    } catch(err){
+      console.error(err);
+      status.textContent = (err.message && err.message.includes('not configured'))
+        ? 'Form not configured yet. Email kristyna.pauly@myresorts.eu directly.'
+        : 'Couldn\'t send. Please try again or email kristyna.pauly@myresorts.eu.';
+      submit.disabled = false;
+      submit.textContent = 'Send me the deck  →';
+    }
+  });
 })();
 </script>
 
