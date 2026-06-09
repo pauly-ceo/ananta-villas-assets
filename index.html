@@ -35,6 +35,31 @@
   .nav__cta:hover{background:#fff;color:var(--ink);border-color:#fff}
   .nav.scrolled .nav__cta:hover{background:var(--ink);color:var(--cream-3);border-color:var(--ink)}
 
+  /* ZPX · zoom-parallax (7 imgs, scale 1→4-9 on scroll, 300vh container) */
+  .zpx{position:relative;width:100%;height:300vh;background:var(--ink);z-index:5}
+  .zpx__sticky{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--ink)}
+  .zpx__item{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;will-change:transform;transform-origin:center center}
+  .zpx__inner{position:relative;height:25vh;width:25vw;overflow:hidden;border-radius:6px;box-shadow:0 20px 50px rgba(0,0,0,.4)}
+  .zpx__inner img{height:100%;width:100%;object-fit:cover;display:block}
+  /* per-index offsets (mirror Aceternity zoom-parallax positioning) */
+  .zpx__item--1 .zpx__inner{position:absolute;top:-30vh;left:5vw;height:30vh;width:35vw}
+  .zpx__item--2 .zpx__inner{position:absolute;top:-10vh;left:-25vw;height:45vh;width:20vw}
+  .zpx__item--3 .zpx__inner{position:absolute;left:27.5vw;height:25vh;width:25vw}
+  .zpx__item--4 .zpx__inner{position:absolute;top:27.5vh;left:5vw;height:25vh;width:20vw}
+  .zpx__item--5 .zpx__inner{position:absolute;top:27.5vh;left:-22.5vw;height:25vh;width:30vw}
+  .zpx__item--6 .zpx__inner{position:absolute;top:22.5vh;left:25vw;height:15vh;width:15vw}
+  .zpx__overlay{position:absolute;inset:0;z-index:10;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:120px 24px 0;text-align:center;color:#fff;pointer-events:none;transition:opacity .8s var(--ease)}
+  .zpx__eb{font-size:11px;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:20px}
+  .zpx__h{font-family:var(--f-display);font-weight:300;font-size:clamp(48px,7vw,108px);line-height:1;letter-spacing:-.025em;margin:0;color:#fff;max-width:1080px;text-shadow:0 4px 30px rgba(0,0,0,.6)}
+  .zpx__h em{font-style:italic;opacity:.92}
+  .zpx__sub{margin-top:24px;font-size:14px;color:rgba(255,255,255,.78);max-width:520px;line-height:1.55}
+  @media(max-width:880px){
+    .zpx{height:240vh}
+    .zpx__overlay{padding-top:96px}
+    .zpx__h{font-size:36px}
+    .zpx__sub{font-size:12px}
+  }
+
   /* HERO */
   .hero{position:relative;height:100vh;height:100svh;min-height:600px;overflow:hidden;background:var(--ink)}
   .hero__poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
@@ -238,6 +263,38 @@
   <div class="nav__wordmark">Ananta</div>
   <a href="#inquire" class="nav__cta">Speak with us</a>
 </header>
+
+<!-- ZOOM PARALLAX · 7 villa renders zoom on scroll -->
+<section class="zpx" id="zpx">
+  <div class="zpx__sticky">
+    <div class="zpx__overlay" id="zpx-overlay">
+      <div class="zpx__eb">Desa Kutuh · Bali · MMXXVII</div>
+      <h1 class="zpx__h">Eight private villas.<br><em>Step closer.</em></h1>
+      <p class="zpx__sub">Designed by Studio Identity Designers · Built by Thierra Construction · Operated by MyResorts.</p>
+    </div>
+    <div class="zpx__item zpx__item--0">
+      <div class="zpx__inner"><img src="https://pauly-ceo.github.io/ananta-villas-assets/render-aerial.jpg" alt="Aerial"></div>
+    </div>
+    <div class="zpx__item zpx__item--1">
+      <div class="zpx__inner"><img src="https://pauly-ceo.github.io/ananta-villas-assets/render-facade.jpg" alt="Facade"></div>
+    </div>
+    <div class="zpx__item zpx__item--2">
+      <div class="zpx__inner"><img src="https://pauly-ceo.github.io/ananta-villas-assets/render-pool.jpg" alt="Pool"></div>
+    </div>
+    <div class="zpx__item zpx__item--3">
+      <div class="zpx__inner"><img src="https://pauly-ceo.github.io/ananta-villas-assets/render-living.jpg" alt="Living"></div>
+    </div>
+    <div class="zpx__item zpx__item--4">
+      <div class="zpx__inner"><img src="https://pauly-ceo.github.io/ananta-villas-assets/render-bedroom.jpg" alt="Bedroom"></div>
+    </div>
+    <div class="zpx__item zpx__item--5">
+      <div class="zpx__inner"><img src="https://pauly-ceo.github.io/ananta-villas-assets/render-courtyard.jpg" alt="Courtyard"></div>
+    </div>
+    <div class="zpx__item zpx__item--6">
+      <div class="zpx__inner"><img src="https://pauly-ceo.github.io/ananta-villas-assets/render-kitchen.jpg" alt="Kitchen"></div>
+    </div>
+  </div>
+</section>
 
 <!-- HERO -->
 <section class="hero" id="top">
@@ -544,6 +601,32 @@
   if(matchMedia('(prefers-reduced-motion: reduce)').matches){
     document.querySelectorAll('.fade').forEach(el=>el.classList.add('in'));
   }
+
+  // ---- ZOOM PARALLAX ----
+  (function(){
+    const container = document.getElementById('zpx');
+    const items = document.querySelectorAll('.zpx__item');
+    const overlay = document.getElementById('zpx-overlay');
+    if (!container || !items.length) return;
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const scales = [4, 5, 6, 5, 6, 8, 9];
+    const onScroll = () => {
+      const rect = container.getBoundingClientRect();
+      const ch = container.offsetHeight;
+      const wh = window.innerHeight;
+      const scrolled = Math.max(0, -rect.top);
+      const maxScroll = Math.max(1, ch - wh);
+      const progress = Math.min(scrolled / maxScroll, 1);
+      items.forEach((item, i) => {
+        const target = scales[i % scales.length];
+        const s = 1 + progress * (target - 1);
+        item.style.transform = 'scale(' + s + ')';
+      });
+      if (overlay) overlay.style.opacity = String(Math.max(0, 1 - progress * 2.2));
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  })();
 })();
 </script>
 
