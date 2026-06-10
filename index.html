@@ -32,6 +32,10 @@
   .nav.scrolled .nav__wordmark{color:#1D2120 !important;text-shadow:none}
   .nav__cta{grid-column:3;justify-self:end;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#fff;padding:11px 22px;border:1px solid rgba(255,255,255,.65);transition:all var(--t-base) var(--ease)}
   .nav.scrolled .nav__cta{color:#1D2120 !important;border-color:rgba(29,33,32,.4) !important}
+  .nav__back{grid-column:1;justify-self:start;font-size:11.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.85);text-shadow:0 1px 12px rgba(0,0,0,.35);transition:color var(--t-base), text-shadow var(--t-base);display:inline-flex;align-items:center;gap:8px}
+  .nav__back:hover{color:#fff}
+  .nav.scrolled .nav__back{color:rgba(29,33,32,.7) !important;text-shadow:none}
+  .nav.scrolled .nav__back:hover{color:#1D2120 !important}
   .nav__cta:hover{background:#fff;color:var(--ink);border-color:#fff}
   .nav.scrolled .nav__cta:hover{background:var(--ink);color:var(--cream-3);border-color:var(--ink)}
 
@@ -242,6 +246,8 @@
     :root{--sp-section:110px;--sp-section-x:32px}
     .nav{padding:18px 22px}
     .nav__cta{padding:9px 16px;font-size:11px}
+    .nav__back{font-size:10px;letter-spacing:.14em}
+    .nav__back .nav__back-label{display:none}
     .hero__inner{padding:0 22px 36px}
     .hero__eyebrow{margin-bottom:24px;font-size:10.5px}
     .hero__sub{margin-top:28px;font-size:14px}
@@ -260,6 +266,7 @@
 <body>
 
 <header class="nav" id="nav">
+  <a href="https://pauly-ceo.github.io/ananta-bali/" class="nav__back" aria-label="Back to all Ananta projects"><span aria-hidden="true">←</span><span class="nav__back-label">&nbsp;&nbsp;All projects</span></a>
   <div class="nav__wordmark">Ananta</div>
   <a href="#inquire" class="nav__cta">Speak with us</a>
 </header>
