@@ -169,6 +169,43 @@
     .mandarin__inner{grid-template-columns:1fr;gap:48px}
   }
 
+  /* SURROUNDINGS · stylized map */
+  .surr{padding:140px var(--sp-section-x);background:var(--ink);color:var(--cream-3);position:relative}
+  .surr__inner{max-width:1280px;margin:0 auto}
+  .surr__head{max-width:880px;margin:0 auto 56px;text-align:center}
+  .surr__eb{font-family:var(--f-body);font-size:11px;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:rgba(241,240,239,.55);margin-bottom:22px;display:inline-flex;align-items:center;gap:14px}
+  .surr__eb::before,.surr__eb::after{content:"";width:32px;height:1px;background:rgba(241,240,239,.4)}
+  .surr__h{font-family:var(--f-display);font-weight:300;font-size:clamp(36px,4.6vw,68px);line-height:1.05;letter-spacing:-.02em;color:var(--cream-3);margin:0 0 24px}
+  .surr__h em{font-style:italic;color:var(--terra)}
+  .surr__lead{font-size:15.5px;line-height:1.7;color:rgba(241,240,239,.78);max-width:680px;margin:0 auto}
+  .surr__split{display:grid;grid-template-columns:1.18fr 1fr;gap:72px;align-items:center;margin-top:48px}
+  .surr__map{position:relative;border:1px solid rgba(241,240,239,.16);background:rgba(0,0,0,.18);padding:28px}
+  .surr__map .corner{position:absolute;width:14px;height:14px;border:1px solid var(--terra)}
+  .surr__map .c1{top:-1px;left:-1px;border-right:0;border-bottom:0}
+  .surr__map .c2{top:-1px;right:-1px;border-left:0;border-bottom:0}
+  .surr__map .c3{bottom:-1px;left:-1px;border-right:0;border-top:0}
+  .surr__map .c4{bottom:-1px;right:-1px;border-left:0;border-top:0}
+  .surr__map svg{width:100%;height:auto;display:block}
+  .surr__note{margin-top:14px;font-family:var(--f-body);font-size:10px;letter-spacing:.3em;text-transform:uppercase;opacity:.45;text-align:center}
+  .mlabel{font-family:var(--f-body);font-size:9.5px;letter-spacing:.22em;fill:var(--cream-3);text-transform:uppercase;font-weight:500}
+  .mlabel.dim{opacity:.62}
+  .msea{fill:rgba(156,184,172,.07)}
+  .mland{fill:rgba(241,240,239,.03);stroke:rgba(139,79,58,.55);stroke-width:1.2}
+  .mdash{stroke:rgba(139,79,58,.55);stroke-width:1;stroke-dasharray:3 5;fill:none}
+  .mdot{fill:var(--terra)}
+  .mring{fill:none;stroke:var(--terra);stroke-width:1;opacity:.7;transform-origin:center;animation:mpulse 2.6s ease-out infinite}
+  @keyframes mpulse{0%{transform:scale(.6);opacity:.85}100%{transform:scale(1.8);opacity:0}}
+  .surr__list{list-style:none;padding:0;margin:0}
+  .surr__list li{display:grid;grid-template-columns:110px 1fr;gap:24px;padding:18px 6px;border-bottom:1px solid rgba(241,240,239,.12);align-items:baseline;transition:background .4s,padding .4s var(--ease)}
+  .surr__list li:hover{background:rgba(241,240,239,.035);padding-left:14px}
+  .surr__list .t{font-family:var(--f-body);font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--terra)}
+  .surr__list .p{font-family:var(--f-display);font-size:21px;line-height:1.3;font-weight:300;color:var(--cream-3)}
+  @media(max-width:880px){
+    .surr{padding:80px 22px}
+    .surr__split{grid-template-columns:1fr;gap:36px;margin-top:28px}
+    .mring{animation:none;opacity:0}
+  }
+
   /* RENDERS */
   .renders{background:var(--cream-1)}
   .renders__intro{padding:140px var(--sp-section-x) 64px;text-align:center}
@@ -428,6 +465,73 @@
         <img src="https://pauly-ceo.github.io/ananta-villas-assets/mandarin-1.jpg" alt="Mandarin Oriental Residences Bali — villa rendering" decoding="async">
         <img src="https://pauly-ceo.github.io/ananta-villas-assets/mandarin-2.jpg" alt="Mandarin Oriental Bali — amenities clubhouse rendering" decoding="async">
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- SURROUNDINGS / LOCATION -->
+<section class="surr" id="location">
+  <div class="surr__inner">
+    <div class="surr__head">
+      <div class="surr__eb">The location</div>
+      <h2 class="surr__h fade"><em>Thirty minutes</em> from<br>the international airport.</h2>
+      <p class="surr__lead fade d1">Next to Kempinski and the upcoming Mandarin Oriental. Walking distance to the Bali National Golf Club, white-sand beaches and beach clubs. Benoa Harbor nearby — day trips to surrounding islands, snorkelling with manta rays, and Garuda Wisnu Kencana, the fifth-largest statue in the world.</p>
+    </div>
+    <div class="surr__split">
+      <div class="surr__map fade">
+        <span class="corner c1"></span><span class="corner c2"></span><span class="corner c3"></span><span class="corner c4"></span>
+        <svg viewBox="0 0 520 400" role="img" aria-label="Stylized map of the Bukit peninsula, Nusa Dua, Bali">
+          <rect class="msea" x="0" y="0" width="520" height="400"/>
+          <path class="mland" d="M60 60 Q150 20 250 42 Q330 58 368 40 Q420 22 462 64 Q486 110 470 170 Q488 220 458 268 Q430 318 360 338 Q290 362 210 346 Q130 332 92 282 Q58 236 70 170 Q50 110 60 60 Z"/>
+          <path class="mdash" d="M130 120 Q230 86 330 104 Q400 116 428 156"/>
+          <path class="mdash" d="M120 200 Q220 170 330 188 Q400 200 430 232"/>
+          <path class="mdash" d="M362 296 Q330 220 312 150 Q304 112 296 78"/>
+          <g>
+            <circle class="mring" cx="362" cy="296" r="9"/>
+            <circle class="mdot" cx="362" cy="296" r="4"/>
+            <text class="mlabel" x="378" y="300">Ananta &middot; Desa Kutuh</text>
+          </g>
+          <g>
+            <circle class="mdot" cx="416" cy="262" r="2.8" opacity=".88"/>
+            <text class="mlabel dim" x="346" y="252">Kempinski 5&#9733;</text>
+          </g>
+          <g>
+            <circle class="mdot" cx="398" cy="222" r="2.8" opacity=".88"/>
+            <text class="mlabel dim" x="288" y="212">Mandarin Oriental</text>
+          </g>
+          <g>
+            <circle class="mdot" cx="306" cy="260" r="2.8" opacity=".88"/>
+            <text class="mlabel dim" x="210" y="280">Bali National Golf</text>
+          </g>
+          <g>
+            <circle class="mdot" cx="296" cy="78" r="2.8" opacity=".88"/>
+            <text class="mlabel dim" x="200" y="68">Airport &middot; 30 min</text>
+          </g>
+          <g>
+            <circle class="mdot" cx="382" cy="112" r="2.8" opacity=".88"/>
+            <text class="mlabel dim" x="394" y="108">Benoa Harbor</text>
+          </g>
+          <g>
+            <circle class="mdot" cx="196" cy="190" r="2.8" opacity=".88"/>
+            <text class="mlabel dim" x="118" y="180">GWK statue</text>
+          </g>
+          <text class="mlabel dim" x="34" y="376">Indian Ocean</text>
+          <g transform="translate(478,52)">
+            <circle r="13" fill="none" stroke="rgba(217,189,140,.5)" stroke-width="1"/>
+            <path d="M0 -9 L3 4 L0 1 L-3 4 Z" fill="#8B4F3A"/>
+            <text class="mlabel" x="-4" y="-18">N</text>
+          </g>
+        </svg>
+        <div class="surr__note">Illustrative &middot; not to scale</div>
+      </div>
+      <ul class="surr__list fade d2">
+        <li><span class="t">5&#9733;</span><span class="p">Kempinski resort next door</span></li>
+        <li><span class="t">2027</span><span class="p">Mandarin Oriental opening within walking distance</span></li>
+        <li><span class="t">Golf</span><span class="p">Bali National Championship course</span></li>
+        <li><span class="t">Beach</span><span class="p">White-sand beaches &amp; beach clubs</span></li>
+        <li><span class="t">30 min</span><span class="p">Ngurah Rai International Airport</span></li>
+        <li><span class="t">Harbor</span><span class="p">Benoa &mdash; island trips &amp; manta rays</span></li>
+      </ul>
     </div>
   </div>
 </section>
